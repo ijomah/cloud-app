@@ -1,0 +1,25 @@
+{
+    "background_color": "005050",
+    "description": "Forcast weather accurately",
+    "dir": "ltr",
+    "display": "standalone",
+    "icon": [
+        {
+            "src": "weather-app/htm/webpage.bg.png",
+            "type": "image/png",
+            "sizes": "814x514"
+        }
+
+    ],
+    "lang": "en-US",
+    "name": "Weather cloud app",
+    "orientation": "any",
+    "scope": "/",
+    "serviceworker": {
+        "scope": "/",
+        "src": "/path/to/sw.js"
+    },
+    "short_name": "CloudTips",
+    "start url": "/",
+    "theme_color": "00ff00"
+}

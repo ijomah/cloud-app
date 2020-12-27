@@ -1,0 +1,170 @@
+﻿body {
+    display:inline;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Aharoni;
+    background-color: #fbf6f6;
+    /*background-position:center*/
+    /*background-image:url("webpage.bg.png");*/
+}
+h1, h2 {
+    background-color: #a7d5ef;
+    /*padding-left: 5em;*/
+    font-size: 40px;
+    /*border-style: dashed;*/
+    /*border-color: green;*/
+    border-width: medium;
+    text-align: center;
+}
+/*div {
+    background-color: #a7d5ef;
+
+}*/
+p {
+    /*background-color: #0094ff;*/
+    font-size: 20px;
+    text-align:center;
+}
+#responsebox {
+    position:relative;
+    left: 15%;
+    background-color:lightblue;
+    border-radius: 9px;
+    width: 315px;
+    padding: 6px 3px 3px 12px;
+}
+/*#testi {
+    background-color:#0000ff
+
+}
+p q {
+    background-color:#000099
+    text-align:center;
+}
+div label {
+    background-color:#ffd800
+
+}
+img[alt=search-icon] {
+    background-image:url("search-icon.png");
+}*/
+label {
+    font-size: x-large;
+    border-bottom: 5px solid blue;
+    border-left: 8px solid #0094ff;
+    border-top: 10px;
+
+
+}
+
+input {
+    display: inline;
+    border-bottom-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    position: relative;
+    left: 0.0005%;
+}
+.locate {
+    border-bottom: 20px;
+}
+.to-date {
+    display: inline;
+    position: relative;
+    margin-top: 5em;
+}
+.date {
+    padding-top: 15px;
+    margin-left: 15px;
+}
+.date-label-a {
+    position:relative;
+    left: 2%
+}
+.date-label-b {
+    position: relative;
+    left: 2%
+}
+.datepicker-a {
+    position: relative;
+    left: 2%
+}
+.datepicker-b {
+    position: relative;
+    left: 2%
+}
+.time {
+    padding-top: 15px;
+    margin-left: 15px;
+}
+.time-label-a {
+    position: relative;
+    left: 2%
+}
+.time-label-b {
+    position: relative;
+    left: 2%
+}
+.timepicker-a {
+    position: relative;
+    left: 2%
+}
+.timepicker-b {
+    position: relative;
+    left: 2%
+}
+
+.copywright {
+    text-align: center;
+}
+#search-icon {
+    /*position:relative;
+    left:25%;*/
+    /*clear: both;*/
+    padding : 0 0 0 5em;
+    width: 40px
+}
+.search {
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: double;
+    border-color: blue;
+    background-color: deepskyblue;
+    margin-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 80px;
+    /*margin-left: 200px;*/
+    width: 48%;
+    position: relative;
+    left: 15%;
+}
+#testi::before {
+    content: 'See ';
+    text-align:center;
+}
+.subtitle::after {
+    content:' - For Mobile';
+}
+@media screen and (min-width:760px) {
+    .subtitle {
+        background-color: darkblue;
+        font-size:x-large;
+    }
+    .subtitle::after {
+        content:' - For Tablet';
+    }
+}
+@media screen and (min-width:960px) {
+    .subtitle {
+        background-color: blue;
+        font-size: x-large;
+    }
+
+        .subtitle::after {
+            content: ' - For Desktop';
+        }
+}
