@@ -52,7 +52,7 @@ body {
   background-image: linear-gradient(#000833e6, #000833e6), url("../images/circuit-board.jpg");
   background-position: center;
   background-size: cover;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
 }
@@ -94,4 +94,8 @@ body {
   .search-case {
     background-image: linear-gradient(skyblue, orange), url("../images/webpack.png");
   }
+}
+
+#copy-right {
+  text-align: center;
 }
