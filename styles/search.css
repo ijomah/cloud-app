@@ -4,6 +4,10 @@ body {
   font-family: sans-serif;
 }
 
+section {
+  height: 90vh;
+}
+
 #search-input {
   /* width: 9.9% */
   width: 16.6%;
