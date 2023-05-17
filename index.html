@@ -12,74 +12,97 @@
 </head>
 <body class="search-case">
 
+  <!-- toaster -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">WeatherApp's Message</strong>
+        <!-- <small>11 mins ago</small> -->
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Sorry! Location is not found.
+      </div>
+    </div>
+  </div>
   <section class="container">
   
-    <div class="row" >
+    <div class="row" >  
       <div id="search-input">
-        <form action="https://www.google.com/search" method="get" class="search-bar">
-          <input type="text" placeholder="Search anything" name="q" />
+        <form class="search-form" id="data-form">
+          <!-- <form class="search-bar"></form> -->
+          <input type="text" placeholder="Search Location" id="input-info" />
           <button type="submit"><img src="images/searchIcon.jpg" alt="search" /></button>
         </form>
       </div>
     </div>
   
-    <div class="row">
+    <div class="row" id="data-area">
+        <!-- <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 g-4">
+          <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="fs-3 card-title">
+                <i class="fa-solid fa-location-dot fa-beat-fade"></i> &nbsp; Kano 
+              </h5>
+              <div id="long-lat">
+                <span class="lead">Long:</span> &nbsp; <span class="badge bg-primary">60<sup>0</sup>N</span>
+                &nbsp; &nbsp; &nbsp;<span class="lead">Lat:</span> &nbsp; <span class="badge bg-primary">60<sup>0</sup>W</span>
+              </div>
+                <div id="weather-info" class="card-text mt-4">
+                    <div class="fs-5 d-flex justify-content-between mt-3"><p>Rainfall:</p><i class="fa-solid fa-cloud-rain fa-2xl"></i> &nbsp;    <span class="badge bg-primary barge-height">200mm</span> </div>
+                    <div class="fs-5 d-flex justify-content-between mt-3"><p>Temp:</p><i class="fa-solid fa-temperature-half fa-2xl"></i><span>&nbsp;   <span class="badge bg-primary">&nbsp; 60<sup>0</sup>C</span>  </span></div>
+                    <div class="fs-5 d-flex justify-content-between mt-3"><p>Wind: </p><i class="fa-solid fa-wind fa-2xl"></i>&nbsp;  <span class="badge bg-primary barge-height">20m/s</span></div>
+                    <div class="fs-5 d-flex justify-content-between mt-3"><p>Cloudy:</p><i class="fa-solid fa-cloud fa-2xl"></i>&nbsp;<span>   <span class="badge bg-primary" >60Pa</span></span></div>
+                </div>
+            </div>
+          </div>
+        </div>
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 g-4">
           <div class="card h-100">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">
+              <h5 class="fs-3 card-title">
                 <i class="fa-solid fa-location-dot fa-beat-fade"></i> &nbsp; Kano 
               </h5>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                <span class="">Long:</span> &nbsp; <span class="badge bg-primary">60<sup>0</sup>N</span>
-                &nbsp; &nbsp; &nbsp;<span class="">Lat:</span> &nbsp; <span class="badge bg-primary">60<sup>0</sup>W</span>
+              <div id="long-lat">
+                <span class="lead">Long:</span> &nbsp; <span class="badge bg-primary">60<sup>0</sup>N</span>
+                &nbsp; &nbsp; &nbsp;<span class="lead">Lat:</span> &nbsp; <span class="badge bg-primary">60<sup>0</sup>W</span>
               </div>
-                <div class="card-text">
-                    <p class="fs-5"><i class="fa-solid fa-cloud-rain fa-2xl"></i> &nbsp; Rainfall:  <span class="badge bg-primary">200mm</span> </p>
-                    <p class="fs-5"><i class="fa-solid fa-temperature-half fa-2xl"></i><span>&nbsp; Temperature:  <span class="badge bg-primary">&nbsp; 60<sup>0</sup>C</span>  </span></p>
-                    <p class="fs-5"><i class="fa-solid fa-wind fa-2xl"></i>&nbsp; Wind Speed: <span class="badge bg-primary">20m/s</span></p>
-                    <p class="fs-5"><i class="fa-solid fa-cloud fa-2xl"></i>&nbsp;<span>Cloudy:   <span class="badge bg-primary" >60Pa</span></span></p>
+                <div id="weather-info" class="card-text mt-4">
+                    <div class="fs-5 d-flex justify-content-between mt-3"><p>Rainfall:</p><i class="fa-solid fa-cloud-rain fa-2xl"></i> &nbsp;    <span class="badge bg-primary barge-height">200mm</span> </div>
+                    <div class="fs-5 d-flex justify-content-between mt-3"><p>Temp:</p><i class="fa-solid fa-temperature-half fa-2xl"></i><span>&nbsp;   <span class="badge bg-primary">&nbsp; 60<sup>0</sup>C</span>  </span></div>
+                    <div class="fs-5 d-flex justify-content-between mt-3"><p>Wind: </p><i class="fa-solid fa-wind fa-2xl"></i>&nbsp;  <span class="badge bg-primary barge-height">20m/s</span></div>
+                    <div class="fs-5 d-flex justify-content-between mt-3"><p>Cloudy:</p><i class="fa-solid fa-cloud fa-2xl"></i>&nbsp;<span>   <span class="badge bg-primary" >60Pa</span></span></div>
                 </div>
             </div>
           </div>
-
-          <div id="responsebox">
-              <div>
-                  
-                  
-
-              </div>
-          </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 g-4">
-            <div id="responsebox">
-              <div>
-                  <h3>Kano</h3>
-                  <span>Longitude: <span>60<sup>0</sup>N</span>,</span> 
-                  <span>Latitude: <span>60<sup>0</sup>W</span></span>
-                  <div>Rainfall: <span>200mm</span>, <span>Temperature:  <span><i class="fa-solid fa-temperature-half"></i>60<sup>0</sup>C</span>  </span></div>
-                  <div>Wind Speed: <span>20m/s</span>, <span>Pressure:  <span>60Pa</span></span></div>
-
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 g-4">
+            <div class="card h-100">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="fs-3 card-title">
+                  <i class="fa-solid fa-location-dot fa-beat-fade"></i> &nbsp; Kano 
+                </h5>
+                <div id="long-lat">
+                  <span class="lead">Long:</span> &nbsp; <span class="badge bg-primary">60<sup>0</sup>N</span>
+                  &nbsp; &nbsp; &nbsp;<span class="lead">Lat:</span> &nbsp; <span class="badge bg-primary">60<sup>0</sup>W</span>
+                </div>
+                  <div id="weather-info" class="card-text mt-4">
+                      <div class="fs-5 d-flex justify-content-between mt-3"><p>Rainfall:</p><i class="fa-solid fa-cloud-rain fa-2xl"></i> &nbsp;    <span class="badge bg-primary barge-height">200mm</span> </div>
+                      <div class="fs-5 d-flex justify-content-between mt-3"><p>Temp:</p><i class="fa-solid fa-temperature-half fa-2xl"></i><span>&nbsp;   <span class="badge bg-primary">&nbsp; 60<sup>0</sup>C</span>  </span></div>
+                      <div class="fs-5 d-flex justify-content-between mt-3"><p>Wind: </p><i class="fa-solid fa-wind fa-2xl"></i>&nbsp;  <span class="badge bg-primary barge-height">20m/s</span></div>
+                      <div class="fs-5 d-flex justify-content-between mt-3"><p>Cloudy:</p><i class="fa-solid fa-cloud fa-2xl"></i>&nbsp;<span>   <span class="badge bg-primary" >60Pa</span></span></div>
+                  </div>
               </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 g-4">
-            <div id="responsebox">
-              <div>
-                  <h3>Kano</h3>
-                  <span>Longitude: <span>60<sup>0</sup>N</span>,</span> 
-                  <span>Latitude: <span>60<sup>0</sup>W</span></span>
-                  <div>Rainfall: <span>200mm</span>, <span>Temperature:  <span><i class="fa-solid fa-temperature-half"></i>60<sup>0</sup>C</span>  </span></div>
-                  <div>Wind Speed: <span>20m/s</span>, <span>Pressure:  <span>60Pa</span></span></div>
-
-              </div>
-          </div>
-        </div>
+            </div>
+          </div> -->
     </div>
   </section>
  
- 
+ <script src="script/script.js"></script>
   
 </body>
 </html>
