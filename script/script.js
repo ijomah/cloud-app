@@ -64,7 +64,12 @@ const displayInfo = (arr) => {
     });
     stringData = mappedArray.join("");
     responseBox.innerHTML = stringData;
-    console.log(stringData);
+    console.log(stringData.length);
+  if (stringData.length === 0) {
+    document.getElementById('data-arc-ele').classList.add('data-arc')
+  } else {
+    document.getElementById('sect-ele').classList.add('sect')
+  }
 }
 
 

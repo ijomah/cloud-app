@@ -3,9 +3,15 @@ body {
   color: slateblue;;
   font-family: sans-serif;
 }
+/* if there is data, this is relevant */
+.sect {
+  display: block;
+  height: calc(75vh + 100%);
+}
 
-section {
-  height: 90vh;
+/* if there is no data, this is relevant */
+.data-arc {
+  height: 67vh;
 }
 
 #search-input {
@@ -57,8 +63,8 @@ section {
   background-position: center;
   background-size: cover;
   /* display: flex; */
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .search-form {
